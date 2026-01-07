@@ -45,7 +45,6 @@ There is a USB-C connector using the native ESP32 USB pins. This is intended for
 
 If you build firmware with the ESPHome tool in Home Assistant, the following stub should be included in the YAML:
 
----------------\/
 ```
 fan:  
   - platform: speed  
@@ -65,18 +64,17 @@ output:
     min_power: 0.20  
     zero_means_zero: True  
 ```
----------------/\
 
 And the board type selected as follows:
 
----------------\/
+
 ```
 esp32:  
   board: esp32-s3-devkitc-1  
   framework:  
     type: esp-idf  
 ```
----------------/\
+
 
 
 
