@@ -1,9 +1,9 @@
-# TOSOT-Aoraki and gree Envo ERV controller
+# TOSOT Aoraki and gree Envo ERV controller
 This is a control board for the ductless minisplit ERV manufactured by Gree and sold under the TOSOT brand on amazon et al. It uses an ESP32-S3 WROOM1 microcontroller. 
 
 
 
-The ERV is provided with 12V from the minisplit (unknown if this is enabled by default) and accepts PWM speed control. 12V is applied via the 2pin female header. I believe the OEM harness can be jammed onto this header. 
+The ERV is provided with 12V from the minisplit (unknown if this is enabled by default) and accepts PWM speed control. 12V is applied via the 2pin female header. I believe the OEM harness can be jammed onto this header. The ERV pulls about 10W at full speed. 
 
 
 
@@ -15,7 +15,7 @@ There is a standard 0.100" pitch pin header provided for the motor connector. Th
 
 
 
-There is a 600mA switching regulator circuit to bring the incoming 12V down to 5v for the PWM, and a subsequent linear regulator to bring 5v down to 3.3v for the ESP32. I am not a SMPS designer, so this was generated using Texas Instruments WBENCH. Two of the ten initial PCB's blew up when power was applied, so this circuit should be considered mildly suspect. The generated assets are included in this repo. 
+There is a 600mA switching regulator circuit to bring the incoming 12V down to 5v for the PWM, and a subsequent linear regulator to bring 5v down to 3.3v for the ESP32. I am not a SMPS designer, so this was generated using Texas Instruments WBENCH. Two of the ten initial PCB's blew up when power was applied, so this circuit should be considered mildly suspect. The generated assets are included in this repo. 600mA was chosen to allow for the power used by 2x particulate sensors and a CO2 sensor on the 5V rail.
 
 
 
