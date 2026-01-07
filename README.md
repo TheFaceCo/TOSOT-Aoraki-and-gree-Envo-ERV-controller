@@ -40,6 +40,9 @@ Also included is a 3pin JST SH header intended for a potentiometer if that's you
 
 
 
+There is a USB-C connector using the native ESP32 USB pins. This is intended for programming only. It will power the ESP, but not the ERV motor. I did not route the second pair of "B" data pins, so if it doesn't connect to a computer you may need to flip the USB connector. 
+
+
 If you build firmware with the ESPHome tool in Home Assistant, the following stub should be included in the YAML:
 
 ---------------\/
